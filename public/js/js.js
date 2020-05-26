@@ -2,9 +2,6 @@ import * as Model from './model.js';
 import * as View from './view.js';
 import {classNames} from './utils.js';
 
-
-console.log('Client Side JS Is Running..');
-
 classNames.searchBtn.addEventListener('click',(e)=>{
     const address = classNames.inputAddress.value;
     classNames.locationText.textContent = '';
