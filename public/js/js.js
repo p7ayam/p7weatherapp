@@ -6,6 +6,7 @@ classNames.searchBtn.addEventListener('click',(e)=>{
     classNames.locationText.textContent = '';
     classNames.summaryText.textContent = '';
     classNames.infText.textContent = '';
+    classNames.highAndLow.textContent = '';
     classNames.locationText.textContent = `Please Wait..`;
     e.preventDefault();
     classNames.inputAddress.value = '';
