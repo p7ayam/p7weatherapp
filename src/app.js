@@ -27,7 +27,7 @@ app.get('/',(req,res)=>{
                     er
                 })
             }if(!er) {
-                weatherCode(latitude , longitude , (er,{summary,temprature,rainChance}={})=>{
+                weatherCode(latitude , longitude , (er,{summary,temprature,rainChance,highTemp,lowTemp}={})=>{
                     if (er){
                         console.log(er)
                     }else {
@@ -35,7 +35,9 @@ app.get('/',(req,res)=>{
                             summary ,
                             temprature,
                             rainChance,
-                            location
+                            location,
+                            highTemp,
+                            lowTemp
                         })
                         console.log('Done.');
                     }

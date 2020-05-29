@@ -11,10 +11,13 @@ const weatherCode = (latitude, longitude, callback)=>{
             callback(`Unable to connect to the weather server!`,undefined);
         }
         else {
+
             callback(undefined,{
                 summary : body.daily.summary,
                 temprature : body.currently.temperature,
                 rainChance  :body.currently.precipProbability,
+                highTemp : body.daily.data[0].temperatureHigh,
+                lowTemp : body.daily.data[0].temperatureLow,
             })
             console.log('successfully weathering...');
 

@@ -1,5 +1,4 @@
-import * as Model from './model.js';
-import * as View from './view.js';
+
 import {classNames} from './utils.js';
 
 classNames.searchBtn.addEventListener('click',(e)=>{
@@ -24,6 +23,7 @@ const changeText = (data)=>{
     else{
         classNames.locationText.textContent = data.location;
         classNames.summaryText.textContent = data.summary;
-        classNames.infText.textContent = `${data.temprature} centigrade temprature with ${data.rainChance}% of rain chance.`;
+        classNames.infText.textContent = `${data.temprature} centigrade temperature with ${data.rainChance}% of rain chance.`;
+        classNames.highAndLow.textContent = `High temperature of day is ${data.highTemp} and Low temperature is ${data.lowTemp}`
     }
 }
