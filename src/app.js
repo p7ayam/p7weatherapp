@@ -4,7 +4,7 @@ const path = require('path')
 const app = express()
 const weatherCode = require('./weatherCode.js');
 const geoCode = require('./geoCode.js');
-
+const port = process.env.PORT || 3000 ;
 //statics
 const staticsDirectory = path.join(__dirname , '../public')
 app.use(express.static(staticsDirectory))
@@ -60,6 +60,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(8080,()=>{
+app.listen(port,()=>{
     console.log('Running.')
 })

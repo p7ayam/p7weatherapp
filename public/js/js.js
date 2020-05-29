@@ -10,7 +10,7 @@ classNames.searchBtn.addEventListener('click',(e)=>{
     classNames.locationText.textContent = `Please Wait..`;
     e.preventDefault();
     classNames.inputAddress.value = '';
-    fetch(`http://localhost:8080/?address='${address}'`).then((res)=>{
+    fetch(`/?address='${address}'`).then((res)=>{
         res.json().then((data)=>{
             changeText(data);
         });
