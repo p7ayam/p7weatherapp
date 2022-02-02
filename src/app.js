@@ -55,6 +55,12 @@ app.get('/help',(req,res)=>{
 
     })
 })
+
+app.get('/amirios?long&lat',(req,res)=>{
+	res.send(long,lat)
+
+})
+
 app.get('*',(req,res)=>{
     res.render('index',{
         title : '- 404 Not Found',
