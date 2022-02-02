@@ -56,7 +56,7 @@ app.get('/help',(req,res)=>{
     })
 })
 
-app.get('/amirios?long&lat',(req,res)=>{
+app.get('/amirios/:long/:lat',(req,res)=>{
 	res.send(long,lat)
 
 })
